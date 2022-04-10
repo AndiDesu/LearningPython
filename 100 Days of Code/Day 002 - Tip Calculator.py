@@ -12,6 +12,10 @@ total_bill = float(input("What was the total bill? $ "))
 tip = int(input("How much would you like to tip? (10, 12 or 15 percent) "))/100
 people = int(input("How many people to split the bill? "))
 
-split = round((total_bill * (1 + tip)) / people,2)
+split = (total_bill * (1 + tip)) / people
 
-print(f"Each person should pay: ${split}")
+# First time using formating, found details here: https://realpython.com/python-numbers/
+# : indicates everything after this is formating
+# .2 means up to 2 decimal places
+# f means fixed decimal places, so it would show $20.10 with the f  and $20.1 without it
+print(f"Each person should pay: ${split:.2f}")
